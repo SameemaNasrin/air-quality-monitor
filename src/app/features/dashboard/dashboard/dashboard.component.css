@@ -1,0 +1,25 @@
+#first{
+    display: flex;
+    height: 94vh;
+}
+
+#second{
+    display: flex;
+    flex-direction: column;
+    min-width: 65%;
+}
+
+app-nearby{
+    min-width: 30%;
+}
+
+app-master-control, app-nearby, app-all-devices {
+    box-sizing: border-box;
+    border: 1.2px solid var(--border-color);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+app-all-devices{
+    height: 60vh;
+}

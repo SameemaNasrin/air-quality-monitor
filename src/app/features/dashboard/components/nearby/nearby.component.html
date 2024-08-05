@@ -1,0 +1,51 @@
+<div class="grid-container">
+    <p class="item1">Nearby</p>
+    <div  class="item2">
+        <button href="#" class="see-all">See all</button>
+    </div>
+    <p class="item3">Office
+        <mat-icon aria-hidden="false" aria-label="Example wifi icon" fontIcon="wifi" class="wifi"></mat-icon>
+
+    </p>
+    <div class="item4">
+        <ul>
+            <li>Air conditioner</li>
+        </ul>
+        <mat-slide-toggle aria-label="Slide" class="custom-slide-toggle"></mat-slide-toggle>
+    </div>
+    <div class="item5 temp temp-slider">
+        <p>24°C</p>
+        <mat-slider min="0" max="100" step="1" discrete>
+            <!--  [displayWith]="formatLabel" showTickMarks-->
+            <input matSliderThumb>
+          </mat-slider>
+          
+        </div>
+    <div class="item6">
+        <p><img src="assets/eco.svg" alt="Eco"><br>Eco</p>
+        <p><img src="assets/hot.svg" alt="Hot"><br>Hot</p>
+        <p><img src="assets/cold.svg" alt="Cold"><br>Cold</p>
+        <p><img src="assets/fan.svg" alt="Fan"><br>Fan</p>
+    </div>
+    <div class="item7">
+        <p>Air quality index</p>
+        <mat-slide-toggle aria-label="Slide" class="custom-slide-toggle"></mat-slide-toggle>
+    </div>
+    <p class="item8 temp">98*</p>
+    <p class="item9">US AQI</p>
+    
+    <div class="item10">
+        <ul>
+            <li>
+                Humidity - <b>60%</b>
+            </li>
+            <li>
+                Pollutant - <b>PM2.5</b>
+            </li>
+        </ul>
+    </div>
+    
+    <p class="item11">
+        <button mat-flat-button>Send AQI Alert</button>
+    </p>
+</div>

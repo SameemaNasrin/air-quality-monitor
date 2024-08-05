@@ -1,0 +1,180 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2vw;
+}
+
+.item1{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.item2{
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+}
+
+.see-all{
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 0px;
+    color: var(--primary-color);
+}
+
+.see-all:hover{
+    cursor: pointer;
+}
+
+.item3{
+    grid-column: 1 / span 3;
+}
+
+.item4{
+    grid-column: 1 / span 3;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+
+
+.item5, .item6, .item8, .item9, .item11{
+    grid-column: 1 / span 3;
+}
+
+.item5, .item8, .item9, .item11{
+    display: flex;
+    justify-content: center;
+}
+
+.item6{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item6 p img{
+    max-width: 2.3vw;
+}
+
+.item7{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 1 / span 3;
+}
+
+.item10{
+    display: flex;
+    grid-column: 1 / span 3;
+}
+
+ul{ 
+    list-style: none; 
+} 
+
+.item4 ul li::before { 
+                  
+    /* \2022 is the CSS Code/unicode for a disc */ 
+    content: "\2022";   
+    color: var(--green-color);  
+    display: inline-block;  
+    width: 1em; 
+    /* margin-left: -1em;  */
+    font-weight: bold; 
+    font-size: 1.1rem;
+} 
+
+.item10 ul li::before { 
+                  
+    /* \2022 is the CSS Code/unicode for a disc */ 
+    content: "\2022";   
+    color: var(--orange-color);  
+    display: inline-block;  
+    width: 1em; 
+    /* margin-left: -1em;  */
+    font-weight: bold; 
+    font-size: 1.1rem;
+} 
+
+.item11 button{
+    background-color: var(--orange-color);
+    color: white;
+    border-radius: 50px;
+    margin-top: 5vh;
+}
+
+::ng-deep .mdc-button__label{
+    color: white !important;
+}
+
+.wifi{
+    font-size: 1rem;
+    padding: 0 15px;
+    position: absolute;
+}
+
+.temp{
+    font-size: 2rem;
+    margin-top: 2vh;
+}
+
+.temp-slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.temp-slider p{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+mat-slide-toggle{
+    max-width: 30px;
+}
+
+:host ::ng-deep .mdc-switch:enabled .mdc-switch__track::after{
+    background-color: transparent !important;
+}   
+
+:host ::ng-deep .mdc-switch--selected .mdc-switch__track {
+    border: 2px solid var(--primary-color);
+    width: 25px !important;
+    background-color: transparent;
+    border-radius: 40px !important;
+}
+
+:host ::ng-deep .mdc-switch--unselected .mdc-switch__track {
+    border: 2px solid var(--font-color);
+    width: 25px !important;
+    background-color: transparent;
+    border-radius: 40px !important;
+}
+
+:host ::ng-deep .mdc-switch:enabled .mdc-switch__track::before{
+    background-color: transparent !important;
+}
+
+:host ::ng-deep .mat-mdc-slide-toggle .mdc-switch--unselected .mdc-switch__handle:has(.mdc-switch__icons) {
+    height: 7px !important;
+    width: 7px !important;
+    position: relative;
+    left: 4px;    
+}
+
+:host ::ng-deep .mat-mdc-slide-toggle .mdc-switch--selected .mdc-switch__handle:has(.mdc-switch__icons) {
+    height: 7px !important;
+    width: 7px !important;
+    position: relative !important;
+    left: -2px !important;
+}
+
+:host ::ng-deep .mdc-switch.mdc-switch--selected .mdc-switch__handle::after {
+    background-color: var(--primary-color) !important;
+}
+:host ::ng-deep .mdc-switch.mdc-switch .mdc-switch__icon {
+    display: none !important;
+}

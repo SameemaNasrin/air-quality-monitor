@@ -1,0 +1,151 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2vw;
+}
+.item1 p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--font-color);
+}
+.item1{
+    grid-column: 1/span 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+#item2-div1{
+    
+    display: flex;
+    justify-content: start;
+}
+
+#item2-div2{
+    height: 70px;
+    display: flex;
+    justify-content: stretch;
+}
+
+#assets-img{
+    display: flex;
+    flex-direction: row;
+}
+
+#assets-img div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+}
+
+#assets-img div p{
+   font-size: 0.5rem;
+}
+
+img{
+    max-width: 1.5rem;
+}
+
+.run-analysis, .restart-all, .send-alert{
+    border: none;
+    background-color: transparent;
+    font-size: 0.7rem;
+    padding: 0 10px;
+    height: fit-content;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* #device-malfunctioning{
+    display: flex;
+    flex-direction: row;
+} */
+ul{ 
+    list-style: none; 
+} 
+
+ul li::before { 
+                  
+    /* \2022 is the CSS Code/unicode for a disc */ 
+    content: "\2022";   
+    color: var(--green-color);  
+    display: inline-block;  
+    width: 1em; 
+    /* margin-left: -1em;  */
+    font-weight: bold; 
+    font-size: 1.1rem;
+} 
+
+#send-alert-li::before{
+     /* \2022 is the CSS Code/unicode for a disc */ 
+     content: "\2022";   
+     color: var(--orange-color);  
+     display: inline-block;  
+     width: 1em; 
+     /* margin-left: -1em;  */
+     font-weight: bold; 
+     font-size: 1.1rem;
+}
+
+#send-alert-li{
+    display: flex;
+}
+
+
+
+
+
+:host ::ng-deep .mdc-switch:enabled .mdc-switch__track::after{
+    background-color: transparent !important;
+}   
+
+:host ::ng-deep .mdc-switch--selected .mdc-switch__track {
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 40px !important;
+    height: 50px;
+}
+
+:host ::ng-deep .mdc-switch--unselected .mdc-switch__track {
+    border: 2px solid var(--font-color);
+    background-color: transparent;
+    border-radius: 40px !important;
+    height: 50px;
+}
+
+:host ::ng-deep .mdc-switch {
+    width: 100px !important;
+}
+
+:host ::ng-deep .mdc-switch:enabled .mdc-switch__track::before{
+    background-color: transparent !important;
+}
+
+:host ::ng-deep .mat-mdc-slide-toggle .mdc-switch--unselected .mdc-switch__handle:has(.mdc-switch__icons) {
+    height: 40px !important;
+    width: 40px !important;
+    position: relative;
+    left: 4px;  
+    border-radius: 50%;  
+}
+
+:host ::ng-deep .mat-mdc-slide-toggle .mdc-switch--selected .mdc-switch__handle:has(.mdc-switch__icons) {
+    height: 40px !important;
+    width: 40px !important;
+    position: relative !important;
+    left: -25px !important;
+    border-radius: 50%;  
+
+}
+
+:host ::ng-deep .mdc-switch.mdc-switch--selected .mdc-switch__handle::after {
+    background-color: var(--primary-color) !important;
+}
+/* :host ::ng-deep .mdc-switch.mdc-switch .mdc-switch__icon {
+    display: none !important;
+} */
+
+mat-slide-toggle{
+    margin-right: 40px;
+}

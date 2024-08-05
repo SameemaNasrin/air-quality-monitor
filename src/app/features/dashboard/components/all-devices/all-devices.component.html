@@ -1,0 +1,121 @@
+<div class="grid-container">
+
+    <section class="item1">
+        <p>All Devices</p>
+        <div class="all-device-button">
+            <button mat-button [routerLink]="['/home']" routerLinkActive="mat-accent" routerLinkActive="active-button">
+                Home
+            </button>
+            <button mat-button [routerLink]="['/home']" routerLinkActive="mat-accent">
+                Office
+            </button>
+            <button mat-button [routerLink]="['/home']" routerLinkActive="mat-accent">
+                Add+
+            </button>
+        </div>
+    </section>
+    <mat-tab-group class="item2">
+        @for(item of items; track item){
+        <mat-tab [label]="item">
+            <div class="grid-container-inner">
+                <div class="grid-container-inner-item1">
+                    <div>
+                        <p>Temprature</p>
+                        <p>Avg temp 25°C</p>
+                    </div>
+                    <div>
+                        @for(l of tempL; track l){
+                        <div id="l-name">
+                            <p>{{l.title}}</p>
+                            <button mat-button [routerLink]="['/home']" routerLinkActive="mat-accent" id="redirec-link">
+                                <img src="assets/link-redirect.svg" alt="link redirect">
+                            </button>
+                        </div>
+                        <div id="l-info">
+                            <ul>
+                                <li>
+                                    <p>
+                                        @if(l.activity == "Running"){
+                                        <img src="assets/dot.svg" alt="dot">
+                                        }
+                                        @else{
+                                        <img src="assets/dot-orange.svg" alt="dot-orange">
+                                        }
+                                        {{l.activity}}
+                                    </p>
+                                    <div id="temp-buttons">
+                                        @if(l.activity == "Running"){
+                                        <img src="assets/thermometer.svg" alt="thermometer">
+                                        }
+                                        @else{
+                                        <img src="assets/thermometer-inactive.svg" alt="thermometer-inactive">
+                                        }
+                                        <button (click)="changeTemp('-', l.title)">-</button>
+                                        <p>{{l.temp}}</p>
+                                        <button (click)="changeTemp('+', l.title)">+</button>
+                                    </div>
+                                    <mat-slide-toggle aria-label="Slide" class="custom-slide-toggle"></mat-slide-toggle>
+                                </li>
+                            </ul>
+                        </div>
+                        }
+                        <div class="report-inaccurate-div">
+                            <button class="report-inaccurate">
+                                Report inaccurate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-container-inner-item2">
+                    <div>
+                        <p>Air quality index</p>
+                        <p>Standard AQI 100*US AQI</p>
+                    </div>
+
+
+                    <div>
+                        @for(aqi of aqiDetails; track aqi){
+                        <div id="l-name">
+                            <p>{{aqi.title}}</p>
+                            <button mat-button [routerLink]="['/home']" routerLinkActive="mat-accent" id="redirec-link">
+                                <img src="assets/link-redirect.svg" alt="link redirect">
+                            </button>
+                        </div>
+                        @for(a of aqi.activityArray; track a){
+                        <div id="l-info">
+                            <ul>
+                                <li>
+                                    <p id="info-p">
+                                        @if(a.activity == "Running"){
+                                        <img src="assets/dot.svg" alt="dot">
+                                        }
+                                        @else{
+                                        <img src="assets/dot-orange.svg" alt="dot-orange">
+                                        }
+                                        {{a.activity}}
+                                    </p>
+                                    <div>
+                                        {{a.aqi}}
+                                    </div>
+                                    @if(a.toggleDisplay){
+                                        <mat-slide-toggle aria-label="Slide" class="custom-slide-toggle"></mat-slide-toggle>
+                                    }
+                                </li>
+                            </ul>
+                        </div>
+                        }
+                        }
+                        <div class="grid-button">
+                            <button mat-flat-button id="send-aqi-alert">Send AQI Alert</button><br>
+                            <button class="report-inaccurate">
+                                Report inaccurate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </mat-tab>
+        }
+    </mat-tab-group>
+</div>

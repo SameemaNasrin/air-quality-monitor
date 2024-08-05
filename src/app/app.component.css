@@ -1,0 +1,8 @@
+.navs{
+    display: flex;
+
+}
+
+app-side-nav{
+    width: 60vw;
+}
